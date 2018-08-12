@@ -1,0 +1,40 @@
+{
+  "name": "ampboilerplate",
+  "version": "0.0.1",
+  "description": "test amp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alnusglutinosa/gulp-amp.git"
+  },
+  "keywords": [
+    "gulp",
+    "amp"
+  ],
+   "config": {
+    "src": {
+      "sass": "src/sass"
+    },
+    "build": {
+      "css": "build/css"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "author": "olha she",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alnusglutinosa/gulp-amp/issues"
+  },
+  "homepage": "https://github.com/alnusglutinosa/gulp-amp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "require-dir": "^1.0.0"
+  }
+}
