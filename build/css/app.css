@@ -1,2 +1,6 @@
 body {
-  background: pink; }
+  background: purple;
+  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }

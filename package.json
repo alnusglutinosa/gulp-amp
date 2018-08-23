@@ -14,7 +14,7 @@
     "gulp",
     "amp"
   ],
-   "config": {
+  "config": {
     "src": {
       "sass": "src/sass"
     },
@@ -22,10 +22,15 @@
       "css": "build/css"
     }
   },
+
   "browserslist": [
+    "last 1 version",
     "> 1%",
-    "last 2 versions"
+    "maintained node versions",
+    "not dead"
   ],
+
+
   "author": "olha she",
   "license": "ISC",
   "bugs": {
@@ -33,8 +38,12 @@
   },
   "homepage": "https://github.com/alnusglutinosa/gulp-amp#readme",
   "devDependencies": {
+    "autoprefixer": "^9.1.3",
+    "browser-sync": "^2.24.6",
     "gulp": "^3.9.1",
+    "gulp-postcss": "^8.0.0",
     "gulp-sass": "^4.0.1",
-    "require-dir": "^1.0.0"
+    "require-dir": "^1.0.0",
+    "run-sequence": "^2.2.1"
   }
 }

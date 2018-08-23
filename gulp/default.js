@@ -1,5 +1,12 @@
 var gulp = require('gulp');
- 
-gulp.task('default', function() {
-	console.log('whatzuuup');
+var runseq = require('run-sequence');
+
+gulp.task('default', function(){
+	runseq(
+		'copy',
+		'sass',
+		'server',
+		'copy:watch',
+		'sass:watch'
+	);
 });
