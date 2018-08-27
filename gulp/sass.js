@@ -3,6 +3,7 @@ var sass = require('gulp-sass');
 var cfg = require('../package.json').config;
 var postcss      = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
+var runseq = require('run-sequence');
 
  
 gulp.task('sass', function () {
@@ -13,5 +14,5 @@ gulp.task('sass', function () {
 });
  
 gulp.task('sass:watch', function () {
-  gulp.watch(cfg.src.sass + '/**/*.*', ['sass']);
+  gulp.watch(cfg.src.sass + '/**/*.*', ()=>runseq('copy','sass','inject'));
 });
