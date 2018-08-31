@@ -21,6 +21,9 @@
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
     <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-video-iframe" src="https://cdn.ampproject.org/v0/amp-video-iframe-0.1.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     <link rel="stylesheet" href="css/app.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   </head>
@@ -106,33 +109,235 @@
 
       <!-- begin header__title  -->
       <div class="header__title">
-        TV Series
+        Українська правда
       </div>
       <!-- end header__title -->
     </header>
     <!-- end header -->
 
-    <!-- begin nav  -->
-    <nav class="nav">
-      <a href="#" class="is-active">POPULAR</a>
-      <a href="#">new Series</a>
-      <a href="#">genres</a>
-      <a href="#">network</a>
-    </nav>
-    <!-- end nav -->
+    <!-- begin img  -->
+    <div class="banner">
+      <amp-img src="img/image.jpg" layout="responsive" alt="Welcome" height="1000" width="1680"></amp-img>
+
+      <div class="banner__content  content">
+        <div class="banner__descr">
+          <h1 class="banner__title">
+            Хроніка 7 квітня. Юрі — волю, політикам — бочки
+          </h1> 
+          <a class="banner__link" href="/authors/553a62534975e/">Рустем Халілов</a>
+        </div> 
+
+        <div class="banner__author">
+          Владислав Скобельський, для УП
+        </div>
+      </div>
+
+    </div>
+    <!-- end img -->
+    
 
     <!-- begin content  -->
     <div class="content">
-      <!-- begin img  -->
-      <div class="img img_top">
-        <amp-img src="img/image.jpg" layout="responsive" alt="Welcome" height="533" width="830"></amp-img>
+
+      <time datetime="2017-04-07">П'ятниця, 7 квітня 2017, 09:00</time>
+
+      <div> 
+        <h3><strong>Найцікавіше: </strong></h3> 
+        <a href="#">2013. Луценко на волі </a>
+        <a href="#">2014. Палають Харків, Донецьк, Луганськ та Миколаїв </a>
+        <a href="#">2015. Україна отримала Суспільне мовлення</a> 
       </div>
-      <!-- end img -->
+
+      <!-- begin news  -->
+      <article class="news">
+        <h1 class="news__title">2011, четвер</h1>
+        <div class="news__descr">
+          <p>– Верховна Рада ухвалила в цілому головну антикорупційну ініціативу президента Віктора Януковича – законопроект "Про засади запобігання і протидії корупції в Україні".</p>
+
+          <p>– Президент виступив зі щорічним зверненням у парламенті, у якому допустив пакетну угоду <a href="http://www.pravda.com.ua/news/2011/04/7/6085315/">щодо Митного союзу</a> за формулою "3+1". Причому, суть пропозиції "+1" він не уточнив.</p>
+
+          <p>– В Росії заявили, що у разі вступу до Митного союзу Україна могла б <a href="http://www.pravda.com.ua/news/2011/04/7/6085512/">економити на газі</a> близько $8 мільярдів на рік.</p>
+
+        </div>
+      </article>
+      <!-- end news -->
+
+      <!-- begin news  -->
+      <article class="news">
+        <h1 class="news__title">2012, субота</h1>
+        <div class="news__descr">
+          <p>– Партія "Фронт змін" прийняла рішення сформувати <a href="http://www.pravda.com.ua/news/2012/04/7/6962306/">єдиний список кандидатів</a> у народні депутати з "Батьківщиною" та іншими опозиційними силами, якщо ті до них приєднаються.</p>
+
+          <p>Згідно закону, блоки не можуть приймати участь у виборах, тому "фронтовикам" прийдеться змінити свої партійні квітки.</p>
+
+        </div>
+      </article>
+      <!-- end news -->
+
+      <!-- begin news  -->
+      <article class="news">
+        <h1 class="news__title">2013, неділя</h1>
+        <div class="news__descr">
+          <p>– Екс-глава МВС <strong>Юрій Луценко</strong> <a href="http://www.pravda.com.ua/news/2013/04/7/6987581/">вийшов на волю</a>.</p>
+
+          <div class="news__media">
+            <amp-youtube width="480"
+              height="270"
+              layout="responsive"
+              data-videoid="OEsOnYW6tTw">
+            </amp-youtube>
+          </div>
+
+
+          <p>Янукович підписав указ про помилування Луценка та екс-міністра охорони навколишнього природного середовища Георгія Філіпчука.</p>
+
+          <p>У цей день опозиція проводила акцію "Вставай, Україно!" в Києві. Луценко на акцію не встиг, але виступив перед її учасниками по телефону.</p>
+
+          <p><em>У 2012 році Луценка засудили на 4 роки, звинувативши у перевищенні службових повноважень та нецільовому використанні державних грошей. 2014 року Печерський райсуд скасував усі вироки, визнав Луценка несудимим і повністю відновив у правах.</em></p>
+
+        </div>
+      </article>
+      <!-- end news -->
+
+      <!-- begin news  -->
+      <article class="news">
+        <h1 class="news__title">2014, понеділок</h1>
+        <div class="news__descr">
+          <p>– У Харкові сепаратисти увійшли у вестибюль обладміністрації й оголосили рішення про<a href="http://www.pravda.com.ua/news/2014/04/7/7021673/"> створення Харківської народної республіки</a>. До вечора з будівлі їх витіснили, але вони оточили ХОДА і почали палити шини.</p>
+
+          <div class="news__media">
+            <amp-img src="img/doneck.jpg" layout="responsive" alt="doneck" height="920" width="690"></amp-img>
+          </div>
+
+          <p>Янукович підписав указ про помилування Луценка та екс-міністра охорони навколишнього природного середовища Георгія Філіпчука.</p>
+
+          <p>У цей день опозиція проводила акцію "Вставай, Україно!" в Києві. Луценко на акцію не встиг, але виступив перед її учасниками по телефону.</p>
+
+          <p><em>У 2012 році Луценка засудили на 4 роки, звинувативши у перевищенні службових повноважень та нецільовому використанні державних грошей. 2014 року Печерський райсуд скасував усі вироки, визнав Луценка несудимим і повністю відновив у правах.</em></p>
+
+ 
+        <amp-iframe width="640"
+          title="Netflix House of Cards branding: The Stack"
+          height="360"
+          layout="responsive"
+          sandbox="allow-scripts allow-same-origin allow-popups"
+          allowfullscreen
+          frameborder="0"
+          src="https://www.radiosvoboda.org/embed/player/0/25324092.html?type=video">
+        </amp-iframe>
+    
+        
+          <p><em>У 2012 році Луценка засудили на 4 роки, звинувативши у перевищенні службових повноважень та нецільовому використанні державних грошей. 2014 року Печерський райсуд скасував усі вироки, визнав Луценка несудимим і повністю відновив у правах.</em></p>
+
+        </div>
+      </article>
+      <!-- end news -->
+
+      <!-- begin news  -->
+      <article class="news">
+        <h1 class="news__title">2015, вівторок</h1>
+        <div class="news__descr">
+
+          <p>– В Україні стартувало <a href="http://www.pravda.com.ua/news/2015/04/7/7063966/">Суспільне мовлення</a>. Президент Петро Порошенко підписав відповідний закон перед журналістами, після чого гендиректор НТКУ <strong>Зураб Аласанія</strong> запустив Суспільне мовлення в прямий ефір.</p>
+
+          <p>– Парламент визнав українських добровольців <a href="http://www.pravda.com.ua/news/2015/04/7/7064021/">учасниками бойових дій</a>. Також Верховна Рада надала право встановлення статусу інваліда війни безпосереднім учасникам АТО.</p>
+
+          <p>– Міліція Києва розслідує закупку <a href="http://www.pravda.com.ua/news/2015/04/7/7064003/">керівництвом "Укртранснафти" </a>сирої нафти в офшорної компанії з Кіпру, яка, за даними УП, була пов'язана з групою "Приват" Ігоря Коломойського. За твердженням МВС, за нафту було переплачене понад 35 млн грн.</p>
+
+          <p>Раніше, у березні, наглядова рада "Укртранснафти" прийняла рішення про відсторонення Олександра Лазорко від виконання обов'язків голови правління.</p>
+
+          <p>– Компартія оголосила про наміри провести <a href="http://www.pravda.com.ua/news/2015/04/7/7064014/">першотравневий марш</a> в Києві за участю комуністів із різних країн світу.</p>
+
+        </div>
+      </article>
+      <!-- end news -->
+
+
+      <!-- begin news  -->
+      <article class="news">
+        <h1 class="news__title">2016, четвер</h1>
+        <div class="news__descr">
+
+          <p>– На <a href="http://www.pravda.com.ua/news/2016/04/7/7104700/">референдумі в Нідерландах</a> більша частина з тих громадян, що прийшли на виборчі дільниці, проголосувала проти ратифікації Угоди про асоціацію Україна-ЄС. "Якщо підсумки референдуму залишаться такими, як сьогодні, то ми не можемо продовжити ратифікацію Угоди про асоціацію з Україною", – заявив прем'єр-міністр Нідерландів Марк Рютте.</p>
+
+          <p>– Екс-нардеп від БЮТ <a href="http://www.pravda.com.ua/news/2016/04/7/7104717/"><strong>Віктор Лозінський</strong> вийшов</a> із в'язниці. Суд застосував до нього умовно-дострокове звільнення. Лозинському перерахували термін за "<a href="https://uk.wikipedia.org/wiki/%D0%97%D0%B0%D0%BA%D0%BE%D0%BD_%D0%A1%D0%B0%D0%B2%D1%87%D0%B5%D0%BD%D0%BA%D0%BE" target="_blank">Законом Савченко</a>".</p>
+
+          <p><em>У 2011 році Лозинського засудили на 15 років за вбивство жителя Кіровоградщини Валерія Олійника. Згодом термін скоротили до 10 років.</em></p>
+
+          <p><em>Рустем Халілов, для УП</em></p>
+
+        </div>
+      </article>
+      <!-- end news -->
+
+
+      <!-- begin sale-sect  -->
+      <section class="sale-sect">
+        <amp-iframe width="640"
+          title="Netflix House of Cards branding: The Stack"
+          height="360"
+          layout="responsive"
+          sandbox="allow-scripts allow-same-origin allow-popups"
+          allowfullscreen
+          frameborder="0"
+          src="https://orbit.lun.ua/blocks/?blockID=7bafb1a1&random=1535724391815">
+        </amp-iframe>
+      </section>
+      <!-- end sale-sect -->
+
+
+      <!-- begin sale-sect  -->
+      <section class="similar-sect">
+        <h3>По темі</h3>
+        <amp-list width="auto"
+          height="100"
+          layout="fixed-height"
+          src="/js/data_news_similar.json">
+          <template type="amp-mustache">
+            <div>
+              <h3>{{title}}</h3>
+              <time>{{time}}</time>
+            </div>
+          </template>
+          <div overflow
+              role="button"
+              aria-label="Show more"
+              class="list-overflow ampstart-btn caps">
+              Show more
+            </div>
+        </amp-list>
+      </section>
+      <!-- end sale-sect -->
+
+
+      <!-- begin redactor-sect  -->
+      <section class="imglist redactor-sect">
+        <h3>Вибір редактора</h3>
+        <amp-list width="auto"
+          height="100"
+          layout="fixed-height"
+          src="/js/data_news_redactor.json">
+          <template type="amp-mustache">
+            <div><amp-img src="{{url}}" layout="responsive" alt="{{title}}" height="533" width="830"></amp-img></div>
+            <h3>{{title}}</h3>
+            <div>{{descr}}</div>
+          </template>
+          <div overflow
+              role="button"
+              aria-label="Show more"
+              class="list-overflow ampstart-btn caps">
+              Show more
+            </div>
+        </amp-list>
+      </section>
+      <!-- end redactor-sect -->
+
+
+
+
 
       <!-- begin imglist  -->
-      <div class="imglist">
-
-
+    <!--   <div class="imglist">
         <amp-list width="auto"
           height="100"
           layout="fixed-height"
@@ -147,11 +352,54 @@
               Show more
             </div>
         </amp-list>
-
-
-      </div>
+      </div> -->
       <!-- end imglist -->
+
+
     </div>
     <!-- end content -->
+
+
+    <footer class="footer"> 
+      <div class="layout-main"> 
+        <div class="copyright">
+          <p>©2000-2018, Українська правда. Використання матеріалів сайту лише за умови посилання (для інтернет-видань - гіперпосилання) на «Українську правду».</p> 
+          <p><a href="http://interfax.com.ua/">
+            <img src="//img.pravda.com/images/logo_interaxsm.png" style="float:left;padding-right:5px"></a>
+          Будь-яке копiювання, публiкацiя, передрук чи наступне поширення iнформацiї, що мiстить посилання на «Iнтерфакс-Україна», суворо забороняється. Передрук, копіювання або відтворення інформації, яка містить посилання на агентство «Українські Новини», в будь-якому вигляді суворо заборонено</p><p>Матеріали з позначкою PROMOTED, ЗА ПІДТРИМКИ публікуються на правах реклами.</p>
+        </div> 
+
+        <div> 
+          <div class="footer-info"> 
+            <div class="quixote"></div> 
+            <div class="footer-info__contacts">
+              <p>Засновник проекту: Георгій Гонгадзе</p> 
+              <p>Головний редактор: 
+                <a href="mailto:ukrpravda@gmail.com">Севгіль Мусаєва-Боровик</a>
+              </p> 
+              <p>Редактор-засновник: <a href="mailto:ukrpravda1@gmail.com">Олена Притула</a>
+              </p> 
+
+              <p>E-mail редакції: <a href="mailto:editor@pravda.com.ua">editor@pravda.com.ua</a></p> 
+
+              <p>Webmaster: <a href="mailto:webmaster@pravda.com.ua">webmaster@pravda.com.ua</a></p>
+            </div> 
+            <div class="footer-info__menu"> 
+              <ul class="footer-menu"> 
+                <li class="footer-menu__item"> 
+                  <a href="/advertising/" class="footer-menu__link">Реклама на сайтІ</a> 
+                </li> 
+                <li class="footer-menu__item"> <a href="/privacy-policy/" class="footer-menu__link">Політика конфіденційності</a> </li> 
+                <li class="footer-menu__item"> <a href="/rules/" class="footer-menu__link">Правила використання матеріалів "Української правди"</a> 
+                </li> 
+                <li class="footer-menu__item"> <a href="http://www.pravda.com.ua/mediahub/" class="footer-menu__link">#MediaHub</a> </li> 
+              </ul> 
+            </div>  
+          </div> 
+        </div>  
+      </div> 
+    </footer>
+
+
   </body>
 </html>

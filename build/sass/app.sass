@@ -2,13 +2,12 @@
 =g($color1, $color2)
 	background-image: linear-gradient($color1, $color2)
 body
-	background: #ebecf1
+	background: #ffffff
 	font-family: Roboto,sans-serif
-	font-weight: bold
 button
 	background: none 
 	border: none 
-	
+
 .sidebar
 	background: #3c3e48 
 	padding: 15px 
@@ -25,11 +24,13 @@ button
 			color: #82bc3c 
 
 .header
-	+g(#99c73a,#6caf3e)
-	border-bottom: 1px solid #3D6423 
 	padding: 10px 10px 5px 10px
 	display: flex
-	align-items: center 
+	align-items: center
+	position: absolute
+	z-index: 2
+	width: 100%
+
 	&__burger
 		order: 1
 		svg
@@ -48,25 +49,6 @@ button
 		text-transform: uppercase
 		font-size: 18px 
 		text-align: center
-.nav
-	padding: 10px 
-	background: #fff
-	border-bottom: 1px solid #D2D4DB 
-	display: flex
-	a
-		font-size: 10px 
-		text-transform: uppercase
-		color: #9da1b0 
-		display: block
-		flex-grow: 1
-		text-align: center
-		text-decoration: none
-		border-right: 1px solid #D5D5D7 
-		&:hover,&.is-active
-			color: #30323b 
-		&:last-child
-			border: none
-
 
 .content
 	padding: 10px 
@@ -74,13 +56,65 @@ button
 	img
 		display: block
 		width: 100% 
-	&_top
-		border: 1px solid #D2D4DB 
-		padding: 10px 
-		background: #fff 
-		margin-bottom: 10px 
 
 .imglist [role=list]
 	display: grid
 	grid-gap: 10px
-	grid-template-columns: 1fr 1fr
+	grid-template-columns: 1fr 1fr 1fr 1fr
+
+.banner
+	position: relative
+	margin-bottom: 10px
+
+	&__content
+		position: absolute
+		bottom: 0
+		width: 100%
+		color: #ffffff
+		background: linear-gradient(to bottom,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%)
+
+	&__link
+		color: #ffffff
+		text-decoration: none
+
+.news
+	padding: 0 10%
+
+	&__descr
+		p 
+			margin-bottom: 15px
+
+		a 
+			color: #900022
+			border-bottom: #900022 1px solid
+			text-decoration: none
+
+	&__media
+		margin-bottom: 15px
+
+
+.footer
+	color: #fff
+	background-color: #333
+	border-top: #900022 5px solid
+
+	a
+		color: #fff
+		font-size: 12px
+		text-decoration: none
+
+	.copyright 
+		font-size: 12px
+		color: #fff
+		margin: 35px 0 40px 0
+
+.footer-info__contacts a 
+	color: #ccc
+
+.layout-main 
+	margin: 0 auto
+	padding: 5px 2.5%
+
+
+
+
