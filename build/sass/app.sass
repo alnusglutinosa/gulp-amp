@@ -1,7 +1,5 @@
 @import variables
 @import reset
-// =g($color1, $color2)
-// 	background-image: linear-gradient($color1, $color2)
 
 // width
 =r($width)
@@ -16,7 +14,39 @@ button
 	background: none 
 	border: none 
 
-.sidebar
+.container
+	max-width: 1025px
+	margin: 0 auto
+	padding: 10px
+
+	+r($screen-md)
+		max-width: none
+
+.container-custom
+	max-width: 690px
+	margin: 0 auto
+
+	+r($screen-md)
+		max-width: none
+
+.sect-important
+	margin: 0 auto
+	padding: 25px 0
+	background: #eee
+
+	+r(750)
+		max-width: none	
+		padding: 20px 15px
+
+.sect-custom
+	padding: 50px 0 100px 0
+	background-color: #f3f3f3
+
+	&__title
+		margin-bottom: 15px
+
+
+.sidebar-left
 	width: 80% 
 	padding: 15px 
 	background: rgba(255,255,255,0.98)
@@ -27,7 +57,7 @@ button
 		color: #222 
 
 		&:hover,&.is-active
-			color: #900022 
+			color: $color-important 
 
 .header
 	padding: 10px 10px 5px 10px
@@ -78,6 +108,27 @@ button
 		+r($screen-lg)
 			order: 2
 			flex-grow: 2
+
+.title-news
+	display: block
+	font-size: 18px
+	font-weight: bold
+	color: #000
+	text-decoration: none
+
+.title-default
+	display: block
+	font-size: 18px
+	font-weight: normal
+	color: $color-important
+	text-decoration: none
+	text-transform: uppercase
+
+	&--decor 
+		padding-top: 9px
+		border-top: $color-important 1px solid
+
+
 
 .sidebar-left
 	&__language
@@ -130,10 +181,12 @@ button
 		text-transform: uppercase
 		cursor: pointer
 
-.amp-close-image
-	width: 100% !important
+#sidebar-left
+	.amp-close-image
+		width: 100%
+		float: right
 
-	.i-amphtml-fill-content 
+	img
 		right: 0
 		left: auto
 		min-width: auto
@@ -164,9 +217,43 @@ button
 		color: #ffffff
 		text-decoration: none
 
-
 .content
 	padding: 10px 
+
+	&__news
+		margin-bottom: 40px
+		padding: 0 10%
+
+		+r($screen-lg)
+			padding: 0
+
+	&__important
+		max-width: 750px
+		margin-bottom: 30px
+
+	&__list-news
+		margin-bottom: 40px
+
+	&__info
+		display: flex
+		justify-content: space-between
+		width: 95%
+		padding: 18px 0 28px 0
+
+	&__views
+		color: #888
+		font-size: 13px
+		line-height: 1.2
+
+.time-news
+	color: #888
+	font-size: 13px
+	line-height: 1.2
+
+.sect-important
+	&__title
+		text-align: center
+		
 .img
 	img
 		display: block
@@ -183,6 +270,8 @@ button
 
 	&__content
 		position: absolute
+		left: 50%
+		transform: translate(-50%, 0)
 		bottom: 0
 		width: 100%
 		color: #ffffff
@@ -192,26 +281,39 @@ button
 		color: #ffffff
 		text-decoration: none
 
+	&__author
+		float: right
+		margin-top: 3px
+		font-size: 9px
+		line-height: 1.2
+		text-transform: uppercase  
+
 .news
-	padding: 0 10%
+
+	&__title
+		margin-bottom: 15px
 
 	&__descr
 		p 
 			margin-bottom: 15px
 
 		a 
-			color: #900022
-			border-bottom: #900022 1px solid
+			color: $color-important
+			border-bottom: $color-important 1px solid
 			text-decoration: none
 
 	&__media
 		margin-bottom: 15px
 
 
+.list-news
+	&__title
+		margin-bottom: 20px
+
 .footer
 	color: #fff
 	background-color: #333
-	border-top: #900022 5px solid
+	border-top: $color-important 5px solid
 
 	a
 		color: #fff
@@ -226,14 +328,5 @@ button
 .footer-info__contacts a 
 	color: #ccc
 
-.layout-main 
-	margin: 0 auto
-	padding: 5px 2.5%
-
 .amp-sidebar-toolbar-target-shown
 	display: none
-
-
-      
-
-
