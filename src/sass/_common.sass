@@ -1,0 +1,35 @@
+// width
+=r($width)
+  @media only screen and (max-width: $width+ "px")
+    @content
+
+body
+	background: #ffffff
+	font-family: Roboto,sans-serif
+
+button
+	background: none 
+	border: none 
+
+.container
+	max-width: 1025px
+	margin: 0 auto
+	padding: 10px
+
+	+r($screen-md)
+		max-width: none
+
+.container-custom
+	max-width: 690px
+	margin: 0 auto
+
+	+r($screen-md)
+		max-width: none
+
+.img
+	img
+		display: block
+		width: 100% 
+
+.amp-sidebar-toolbar-target-shown
+	display: none

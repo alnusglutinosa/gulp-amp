@@ -1,0 +1,23 @@
+.language-list
+	display: flex
+	margin-right: 10px
+	color: #ffffff
+	
+	.is-active
+		opacity: 0.5
+
+	+r($screen-lg)
+		color: #333
+
+	&__item
+
+		&:not(:last-child)
+			padding-right: 5px
+
+			&::after
+				content: "/"
+				padding-left: 2px
+
+	&__link
+		color: #ffffff
+		text-decoration: none
