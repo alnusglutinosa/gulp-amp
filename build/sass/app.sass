@@ -1,27 +1,33 @@
+@import variables
 @import reset
-=g($color1, $color2)
-	background-image: linear-gradient($color1, $color2)
+// =g($color1, $color2)
+// 	background-image: linear-gradient($color1, $color2)
+
+// width
+=r($width)
+  @media only screen and (max-width: $width+ "px")
+    @content
+
 body
 	background: #ffffff
 	font-family: Roboto,sans-serif
+
 button
 	background: none 
 	border: none 
 
 .sidebar
-	background: #3c3e48 
-	padding: 15px 
-	font-size: 15px 
 	width: 80% 
-	li
-		margin-bottom: 22px 
+	padding: 15px 
+	background: rgba(255,255,255,0.98)
+	font-size: 15px 
+
 	a
 		text-decoration: none
-		color: #fff 
-		font-weight: bold
-		text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3)
+		color: #222 
+
 		&:hover,&.is-active
-			color: #82bc3c 
+			color: #900022 
 
 .header
 	padding: 10px 10px 5px 10px
@@ -31,17 +37,36 @@ button
 	z-index: 2
 	width: 100%
 
-	&__burger
-		order: 1
-		svg
-			width: 24px 
-	&__search
-		order: 3
-		svg
-			width: 24px 
-	&__title
+	&__nav
 		order: 2
-		flex-grow: 2
+		flex-grow: 4
+
+	&__lang
+		order: 4
+		margin-right: 20px
+
+		+r($screen-lg)
+			margin-right: 0
+			color: #333
+
+	&__search
+		display: block
+		order: 5
+
+		svg
+			width: 24px
+
+	&__burger
+		display: flex
+		order: 1
+
+		svg
+			width: 24px 
+
+	 
+	&__title
+		order: 1
+		flex-grow: 1
 		position: relative
 		top: -.15em 
 		text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3)
@@ -49,6 +74,96 @@ button
 		text-transform: uppercase
 		font-size: 18px 
 		text-align: center
+
+		+r($screen-lg)
+			order: 2
+			flex-grow: 2
+
+.sidebar-left
+	&__language
+		+r($screen-lg)
+			width: 70%
+			margin-bottom: 25px
+			margin-left: auto
+			margin-right: auto
+
+	&__menu
+		width: 70%
+		margin-bottom: 20px
+		margin-left: auto
+		margin-right: auto
+
+	&__all-menu
+		width: 70%
+		margin-bottom: 10px
+		margin-left: auto
+		margin-right: auto
+
+
+.main-menu
+	display: flex
+	flex-direction: column
+
+	&__item
+		padding: 12px 0 10px 0
+		border-top: #d0d0d0 1px solid
+
+	&__link
+		display: block
+		color: #222
+		font-size: 1.5em
+		font-weight: bold
+		text-transform: uppercase
+		cursor: pointer
+
+.all-menu
+	display: flex
+	flex-direction: column
+
+	&__item
+		padding: 10px 0 10px 0
+
+	&__link
+		display: block
+		color: #222
+		font-size: 1.3em
+		text-transform: uppercase
+		cursor: pointer
+
+.amp-close-image
+	width: 100% !important
+
+	.i-amphtml-fill-content 
+		right: 0
+		left: auto
+		min-width: auto
+		width: 20px
+		height: 20px
+
+.language-list
+	display: flex
+	margin-right: 10px
+	color: #ffffff
+	
+	.is-active
+		opacity: 0.5
+
+	+r($screen-lg)
+		color: #333
+
+	&__item
+
+		&:not(:last-child)
+			padding-right: 5px
+
+			&::after
+				content: "/"
+				padding-left: 2px
+
+	&__link
+		color: #ffffff
+		text-decoration: none
+
 
 .content
 	padding: 10px 
@@ -115,6 +230,10 @@ button
 	margin: 0 auto
 	padding: 5px 2.5%
 
+.amp-sidebar-toolbar-target-shown
+	display: none
 
+
+      
 
 
